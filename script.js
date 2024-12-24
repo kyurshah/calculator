@@ -117,6 +117,7 @@ clearButton.addEventListener("click", function() {
 })
 
 deleteButton.addEventListener("click", function() {
+    display.innerText = display.innerText.toString().slice(0,-1)
     console.log("deleteButton")
     console.log(`currentNumber = ${currentNumber}`)
     console.log(`previousNumber = ${previousNumber}`)

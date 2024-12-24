@@ -94,6 +94,11 @@ button {
     background-color: hsl(35, 100%, 50%);
     flex: 1;
 }
+
+#clearButton {
+    /* background-color: hsl(35, 100%, 50%); */
+    flex: 1;
+}
 #equalButton:hover {
     background-color: hsl(35, 100%, 65%);
 }
