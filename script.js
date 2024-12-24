@@ -105,7 +105,6 @@ equalButton.addEventListener("click", function() {
 
 clearButton.addEventListener("click", function() {
     console.log("clearButton")
-    nums.innerText = "";
     display.innerText = "";
     currentNumber = "";
     previousNumber = "";
