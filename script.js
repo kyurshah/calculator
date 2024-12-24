@@ -58,12 +58,17 @@ function operate(operator, currentNumber, previousNumber) {
 
 digitButtons.forEach((digitButton) => {
     digitButton.addEventListener("click", function() {
-
         const value = digitButton.textContent;
-        display.innerText += value;
-        currentNumber += value;
+
+
+        if (!isNaN(value) || !currentNumber.includes(".")) {
+            display.innerText += value;
+            currentNumber += value;
+        }
+
         console.log(`currentNumber = ${currentNumber}`)
         console.log(`previousNumber = ${previousNumber}`)
+
     })
 });
 
@@ -100,7 +105,7 @@ equalButton.addEventListener("click", function() {
     console.log("equalButton")
     const result =  operate(operator, parseFloat(currentNumber), parseFloat(previousNumber))
     display.innerText = Math.round(result * 100) / 100;
-    
+
 })
 
 clearButton.addEventListener("click", function() {
@@ -113,6 +118,9 @@ clearButton.addEventListener("click", function() {
 
 deleteButton.addEventListener("click", function() {
     console.log("deleteButton")
+    console.log(`currentNumber = ${currentNumber}`)
+    console.log(`previousNumber = ${previousNumber}`)
+    console.log(`operator = ${operator}`)
 })
 
 percentageButton.addEventListener("click", function() {
